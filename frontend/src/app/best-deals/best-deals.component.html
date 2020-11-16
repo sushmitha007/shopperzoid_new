@@ -1,0 +1,59 @@
+<br>
+<br>
+<div class="container">    
+    <section class="row d-flex flex-row justify-content-center">
+        <div *ngIf = "isData; else error_content">
+            <div *ngIf = "isCheckedMore; else other_content" >
+                    <div class="d-inline-flex" *ngFor = "let product of products| slice:0:1" style="margin:3rem;">
+                        
+                            <mat-card class="example-card">
+                                <a (click)="goToProduct(product.sellerId)">
+                              <img class="justify-content-center" mat-card-image src="{{getProduct.productImage}}" alt="Image of Product" style="height: 90%;width: 110%;">
+                              <mat-card-content>
+                                <h4>
+                                        Price: <span id="priceblock_ourprice" class="a-size-medium a-color-price priceBlockBuyingPriceString">₹&nbsp;{{product.productPrice}}.00</span>
+                                </h4>
+                              </mat-card-content>
+                            </a>
+                              <mat-card-actions>
+                                   <button mat-button (click)="buyItem(product.sellerId)" class="btn btn-dark">Buy Item</button>
+                              </mat-card-actions>
+                            </mat-card>
+                          
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button mat-button style="display: flex; align-content: flex-end;" (click) = "checkMore()">Check for More</button>
+                    </div>
+            </div>
+            
+            <ng-template #other_content>
+                <div class="d-inline-flex" *ngFor = "let product of products" style="margin:3rem;">
+                       
+                            <mat-card class="example-card">
+                                <a (click)="goToProduct(product.sellerId)">
+                                    <img mat-card-image src="{{getProduct.productImage}}" alt="Image of Product" style="height: 90%;width: 110%;">
+                                    <mat-card-content>
+                                        <h4>
+                                            Price: <span id="priceblock_ourprice" class="a-size-medium a-color-price priceBlockBuyingPriceString">₹&nbsp;{{product.productPrice}}.00</span>
+                                        </h4>
+                                    </mat-card-content>
+                                </a>
+                                <mat-card-actions>
+                                    <button mat-button (click)="buyItem(product.sellerId)" class="btn btn-dark">Buy Item</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <button mat-button  (click) = "checkMore()" >Check for Less</button>
+                </div>
+            </ng-template>
+        </div>
+        
+        <ng-template #error_content>
+            <div class="error">
+                <img src="assets/seller-dashboard/no-magento-product-found.jpg" alt="Product Not found" />
+            </div>
+        </ng-template>
+    </section>
+</div>

@@ -1,0 +1,93 @@
+<!-- Navbar Version 2.0 -->
+<!-- <nav class="navbar navbar-expand-sm navbar-light navbar-custom badge-light fixed-top scrolling-navbar" id="main-nav">
+  <div class="container d-flex flex-row justify-content-start">    
+    <a class="navbar-brand" href="/">
+      <span class="navBrand">Sh</span>
+      <img class="logo-image" src="../../assets/New Project (1).png" alt="logo">
+      <span class="navBrand">pperZ</span>
+      <img class="logo-image" src="../../assets/New Project (1).png" alt="logo">
+      <span class="navBrand">id.</span>
+    </a> -->
+
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="container1">
+        <input (keydown.enter)="toSearch($event)" class="form-control" type="text" placeholder="Search for product name...">
+        
+        <div class="search"></div>
+      </div>
+      
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="seller-registration"><span class="nav-font">Register as Partner</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login-page"><span class="nav-font">Login</span></a>
+        </li>
+      </ul> -->
+
+      <!-- <div class="search d-flex align-items-center justify-content-start">
+        <form class="form">
+          <mat-form-field class="full-width">
+            <mat-label>
+              <mat-icon>search</mat-icon> <b> Search</b>
+            </mat-label>
+            
+            <input matInput (keydown.enter)="toSearch($event)" placeholder="">
+          </mat-form-field>
+        </form>
+      </div> -->
+    <!-- </div>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav> -->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+  <a class="navbar-brand" href="/">
+    <!-- <img class="logo-image" src="../../assets/New Project (1).png" alt="logo">
+    <span class="navBrand">ShopperZoid.</span> -->
+    <span class="navBrand">Sh</span>
+    <img class="logo-image" src="../../assets/New Project (1).png" alt="logo">
+    <span class="navBrand">pperZ</span>
+    <img class="logo-image" src="../../assets/New Project (1).png" alt="logo">
+    <span class="navBrand">id.</span>
+  </a>
+  
+  <form class="form-inline col-md-7">
+      <input  class="form-control mr-sm-auto newsearch" type="text" (keydown.enter)="toSearch($event)" placeholder="&#xF002; Search for product name..." [formControl]="control" [matAutocomplete]="auto" style="font-family:Arial, FontAwesome" aria-label="Search" >
+      
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+          {{street}}
+        </mat-option>
+      </mat-autocomplete>
+      
+      <!--<button class="btn btn-dark my-2 my-sm-0" (click)="toSearch($event)" type="submit"><i class="fa fa-search"></i></button>-->
+  </form>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="seller-registration"><span class="nav-font">Register as Partner</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login-page"><span class="nav-font">Login</span></a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>

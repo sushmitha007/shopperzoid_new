@@ -1,0 +1,23 @@
+id,nameGenre,parentnode,nodetype,nodeclass,parentrelation
+0,mobiles,electronics,subCategory,subCategory,hasA
+1,laptops,electronics,subCategory,subCategory,hasA
+2,computers,electronics,subCategory,subCategory,hasA
+3,power banks,electronics,subCategory,subCategory,hasA
+4,speaker,electronics,subCategory,subCategory,hasA
+5,television,electronics,subCategory,subCategory,hasA
+6,camera,electronics,subCategory,subCategory,hasA
+7,home audio,electronics,subCategory,subCategory,hasA
+8,tablet,electronics,subCategory,subCategory,hasA
+9,digital watch,electronics,subCategory,subCategory,hasA
+10,gaming,electronics,subCategory,subCategory,hasA
+10,watches,accessories,subCategory,subCategory,hasA
+11,smart wearables,accessories,subCategory,subCategory,hasA
+12,sunglasses,accessories,subCategory,subCategory,hasA
+13,headphones,accessories,subCategory,subCategory,hasA
+14,bags,accessories,subCategory,subCategory,hasA
+15,backpacks,accessories,subCategory,subCategory,hasA
+16,wallets,accessories,subCategory,subCategory,hasA
+17,helmets,accessories,subCategory,subCategory,hasA
+18,caps,accessories,subCategory,subCategory,hasA
+19,earphones,accessories,subCategory,subCategory,hasA
+20,charger,accessories,subCategory,subCategory,hasA
